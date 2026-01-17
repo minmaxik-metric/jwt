@@ -1,3 +1,3 @@
-export * from "./issuer"
-export * from "./consumer"
+export * from "./issuer.module"
+export * from "./consumer.module"
 export * from "./interfaces"
