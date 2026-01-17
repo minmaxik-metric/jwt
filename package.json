@@ -1,0 +1,27 @@
+{
+  "name": "@citec-spbu/jwt",
+  "version": "1.0.0",
+  "description": "Lightweight auth lib",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"lib/**/*.ts\""
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@citec-spbu/core": "^1.0.3",
+    "@types/node": "^25.0.8",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.12",
+    "@nestjs/core": "^11.1.12",
+    "@nestjs/jwt": "^11.0.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  }
+}
