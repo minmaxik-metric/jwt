@@ -1,4 +1,4 @@
-import { DynamicModule, Module, Provider } from "@nestjs/common"
+import { DynamicModule, Global, Module, Provider } from "@nestjs/common"
 
 import {
 	JwtModuleAsyncOptions,
@@ -9,6 +9,7 @@ import { JWT_MODULE_OPTIONS } from "./jwt.constants"
 import { createJwtProvider } from "./jwt.providers"
 import { JwtService } from "./jwt.service"
 
+@Global()
 @Module({
 	providers: [JwtService],
 	exports: [JwtService]

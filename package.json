@@ -1,6 +1,6 @@
 {
   "name": "@citec-spbu/jwt",
-  "version": "1.1.1",
+  "version": "1.1.5",
   "description": "Lightweight auth lib",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,13 +16,13 @@
   },
   "devDependencies": {
     "@citec-spbu/core": "^1.0.3",
-    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.0.8",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "@nestjs/common": "^11.1.12",
+    "@types/jsonwebtoken": "^9.0.10",
     "jsonwebtoken": "^9.0.3"
   }
 }

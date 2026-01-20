@@ -54,7 +54,7 @@ export class JwtService {
 		const privateKey = this.getSecretKey(options, "privateKey")
 
 		if (!privateKey) {
-			throw new Error('"privateKey" must be provided for "sign" function')
+			throw new Error('"privateKey" must be provided for "signAsync" function')
 		}
 
 		return new Promise((resolve, reject) =>
@@ -72,6 +72,10 @@ export class JwtService {
 
 		const publicKey = this.getSecretKey(options, "publicKey")
 
+		if (!publicKey) {
+			throw new Error('"publicKey" must be provided for "verify" function')
+		}
+
 		return jwt.verify(token, publicKey, verifyOptions) as TokenPayload
 	}
 
@@ -85,6 +89,10 @@ export class JwtService {
 		) as jwt.VerifyOptions
 
 		const publicKey = this.getSecretKey(options, "publicKey")
+
+		if (!publicKey) {
+			throw new Error('"publicKey" must be provided for "verifyAsync" function')
+		}
 
 		return new Promise((resolve, reject) =>
 			jwt.verify(token, publicKey, verifyOptions, (err, decoded) =>
